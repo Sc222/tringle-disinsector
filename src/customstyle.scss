@@ -1,0 +1,478 @@
+@charset "utf-8";
+
+// Import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap');
+
+// Brand colors
+$green: #38dc91;
+$dark-bg: #57B2A7;
+$darker-bg: #408c83;
+$light-green: #DCFAE9;
+$lightest-green: #BBF5D5;
+$contrast-pink: #FF3061;
+$red: #EF6C6C;
+
+// Custom images
+$img-hero: url('images/hero-bg.svg');
+
+// Custom sizes
+$size-hero-title: 2.5rem;
+$speed-slow: 250ms;
+
+// Update Bulma's global variables
+$family-secondary: "Nunito", sans-serif;
+$family-primary: "Open Sans", sans-serif;
+$primary: $green;
+$primary-dark: #22BF78;
+$accent:$red;
+$danger: $red;
+$link: $green;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$font-dark-secondary: #466E6D;
+$font-dark-primary: #2A4747;
+$font-light: #DCFAE9;
+
+// Update some of Bulma's component variables
+$body-background-color: #FAFAFA;
+
+// Update table variables
+$table-striped-row-even-background-color: $font-light;
+$table-color: $font-dark-primary;
+$table-head-cell-color: $font-light;
+$table-head-background-color:$dark-bg;
+
+
+// Import everything
+
+// Import only used Bulma files
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/grid/tiles.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/elements/other.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/modal.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+
+// import accordion
+@import "../node_modules/accordion-js/dist/accordion.min.css";
+
+// import carousel
+//@import "../node_modules/glider-js/glider.min.css";
+
+// import tooltip
+//@import "tooltip.scss";
+
+// Import only what you need from Bulma
+//@import "../../node_modules/bulma/sass/utilities/_all.sass";
+//@import "../../node_modules/bulma/sass/base/_all.sass";
+//@import "../../node_modules/bulma/sass";
+//@import "../../node_modules/bulma/sass/elements/container.sass";
+//@import "../../node_modules/bulma/sass/elements/title.sass";
+//@import "../../node_modules/bulma/sass/form/_all.sass";
+//@import "../../node_modules/bulma/sass/components/navbar.sass";
+//@import "../../node_modules/bulma/sass/layout/hero.sass";
+//@import "../../node_modules/bulma/sass/layout/section.sass";
+
+// Bulma set font-family to secondary
+.title, .modal-card-title {
+  font-family: $family-secondary;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+// New styles
+.map-container {
+  min-height: 400px;
+}
+
+.border-logo {
+  border: 1px solid $grey-light;
+  border-radius: $radius-rounded;
+  transition: border-color $speed-slow $easing;
+}
+
+.is-bordered-and-filled {
+  border-color: $primary !important;
+  color: $primary;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+
+  &:focus {
+    color: $primary !important;
+    background-color: white;
+  }
+
+  &:hover {
+    color: $white !important;
+    background-color: $green;
+  }
+}
+
+.image.is-28x28 {
+  height: 28px;
+  width: 28px;
+}
+
+//floating button
+.is-floating {
+  box-shadow: $card-shadow;
+  border-radius: 50%;
+  position: fixed;
+  transition: transform $speed $easing;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
+.is-rounded-with-icon{
+  border-radius: 50% !important;
+  display: inline-block;
+}
+
+// Modal for images
+.modal-image-content {
+  max-height: calc(100vh - 50px);
+  width: auto;
+  padding: 0;
+}
+
+// Image inside image modal
+.modal-image {
+  max-height: calc(100vh - 60px);
+}
+
+.has-box-shadow {
+  box-shadow: $card-shadow;
+}
+
+// only touch styles
+@include desktop {
+  .has-bg-transparent-desktop {
+    background: bulmaRgba($white, 0);
+    box-shadow: none;
+    transition: background $speed-slow $easing;
+  }
+
+  .is-very-big-desktop{
+    font-size: $size-hero-title;
+  }
+
+  .logo-is-bordered-desktop {
+    border-color: $green !important;
+  }
+
+  .is-scrolled-desktop {
+    background: bulmaRgba($white, 1);
+    box-shadow: $card-shadow;
+  }
+
+  .p-6-desktop {
+    padding: 3rem !important;
+  }
+
+  .pt-5-desktop {
+    padding-top: 2rem !important;
+  }
+
+  .is-fullheight-on-desktop {
+    min-height: 100vh !important;
+  }
+}
+
+@include mobile{
+  .mx-4-mobile{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.border-certificate {
+  border-radius: 5px !important;
+  border: medium solid $lightest-green;
+}
+
+.certificate {
+  &:hover {
+    opacity: 0.7
+  }
+
+  background-color: $white;
+  transition: opacity $speed $easing;
+}
+
+// Equal height cards
+.equal-height-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-height-card .card-content {
+  height: 100%;
+}
+
+.glider-dot {
+  background: $grey-light;
+
+  &:hover, &:focus, &.active,{
+    background: $green;
+  }
+}
+
+.glider-next, .glider-prev {
+  color: $grey;
+
+  &:focus {
+    color: $grey-light;
+  }
+
+  &:hover{
+    color: $green;
+  }
+}
+
+.mb-neg {
+  margin-bottom: -0.3rem !important;
+}
+
+.center-vertically {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.has-bg-img-hero {
+  background: $img-hero center top;
+  background-size: cover;
+}
+
+.has-bg-primary-lightest {
+  background: $lightest-green;
+}
+
+
+.has-bg-light-green{
+  background: $font-light;
+}
+
+.has-text-dark-secondary{
+  color: $font-dark-secondary;
+}
+
+.has-text-dark-primary{
+  color: $font-dark-primary;
+}
+
+.has-text-light-custom{
+  color: $font-light;
+}
+
+.lightest-green {
+  color: $lightest-green;
+}
+
+.custom-link {
+  &:hover {
+    color: $green;
+  }
+
+  color: $font-light;
+  transition: color $speed $easing;
+}
+
+.custom-link-dark {
+  &:hover {
+    color: $green;
+  }
+
+  color: $font-dark-secondary;
+  transition: color $speed $easing;
+}
+
+.service-link {
+  &:hover {
+    color: $primary-dark !important;
+  }
+
+  color: $green !important;
+  transition: color $speed $easing;
+}
+
+//disinsector styles
+.is-size-title-icon{
+  width:5em;
+  height:5em;
+}
+
+.is-review-avatar{
+  width:6em;
+  height:6em;
+  border: 3px solid $primary;
+  border-radius: 50%;
+}
+
+.is-partner-icon{
+  width:auto !important;
+  height:6em !important;
+}
+
+.is-worker-avatar{
+  border: 3px solid $primary;
+  border-radius: 15px;
+}
+
+.is-worker-avatar-rounded{
+  border-radius: 13px;
+}
+
+.px-order-button{
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.is-border-bolder{
+  border-width: 1.5px !important;
+}
+
+.has-text-white-when-interacted{
+  &:hover{
+    color:#FFFFFF !important;
+  }
+  &:focus{
+    color:#FFFFFF !important;
+  }
+}
+
+
+.has-bg-darker{
+  background-color: $darker-bg;
+}
+
+.has-bg-accent{
+  background-color: $accent;
+}
+
+.has-text-accent{
+  color: $accent;
+}
+
+.is-stretch-col-vertically{
+  display: flex;
+  flex-direction: row; // this is default
+  align-items: stretch !important; // this will stretch the children vertically
+}
+
+.is-fill-column{
+  height: 100%;
+}
+
+@include touch{
+  .px-6-touch{
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .is-size-title-icon{
+    width:4em;
+    height:4em;
+  }
+
+  .is-review-avatar{
+    width:5em;
+    height:5em;
+  }
+
+  .is-partner-icon{
+    width:auto !important;
+    height:5em !important;
+  }
+
+}
+
+//!!! tablet menu
+.tablet-menu {
+  background: white;
+  box-shadow: $card-shadow !important;
+}
+
+@include mobile{
+  .has-navbar-fixed-top-mobile{
+    padding-top: 3.25rem;
+  }
+}
+
+
+ .tablet-menu-container {
+  margin: 0 auto;
+}
+
+ .tablet-menu-container .column {
+  line-height: 38px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+   font-weight: 600;
+   font: $family-secondary;
+}
+
+.tablet-menu-container .column ul li a{
+  color: $font-dark-secondary;
+  &:hover{
+    color: $primary;
+    transition: all .1s ease-in-out;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.tablet-menu-container .column ul li {
+  display: inline-block;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  &.is-active a{
+    color: $primary;
+    border-bottom: 2px solid $primary;
+
+    &:hover{
+      color: $primary-dark;
+      transition: all .1s ease-in-out;
+      border-bottom: 2px solid $primary-dark;
+    }
+  }
+}
+
+// Custom table
+table.custom-table{
+  border: 1.5px solid $dark-bg !important;
+  border-radius: 5px !important;
+  border-collapse: separate;
+}
+
+table.custom-table thead tr th{
+  color:$font-light !important;
+  border:none !important;
+}
+
+table.custom-table tbody tr td{
+  border:none !important;
+}
