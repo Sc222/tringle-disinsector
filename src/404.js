@@ -1,4 +1,3 @@
-import {burgerSetup, setupFormModal, setupFormSubmission, setupServicesModals} from "./ui-helpers";
 import {config, dom, library} from "@fortawesome/fontawesome-svg-core";
 import {faClock, faEnvelope, faMapMarkerAlt, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
 

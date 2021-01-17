@@ -67,25 +67,8 @@ $table-head-background-color:$dark-bg;
 @import "../node_modules/bulma/sass/components/modal.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
 
-// import accordion
-@import "../node_modules/accordion-js/dist/accordion.min.css";
-
 // import carousel
-//@import "../node_modules/glider-js/glider.min.css";
-
-// import tooltip
-//@import "tooltip.scss";
-
-// Import only what you need from Bulma
-//@import "../../node_modules/bulma/sass/utilities/_all.sass";
-//@import "../../node_modules/bulma/sass/base/_all.sass";
-//@import "../../node_modules/bulma/sass";
-//@import "../../node_modules/bulma/sass/elements/container.sass";
-//@import "../../node_modules/bulma/sass/elements/title.sass";
-//@import "../../node_modules/bulma/sass/form/_all.sass";
-//@import "../../node_modules/bulma/sass/components/navbar.sass";
-//@import "../../node_modules/bulma/sass/layout/hero.sass";
-//@import "../../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/glider-js/glider.min.css";
 
 // Bulma set font-family to secondary
 .title, .modal-card-title {
