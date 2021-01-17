@@ -158,7 +158,7 @@ $table-head-background-color:$dark-bg;
   }
 
   .is-very-big-desktop{
-    font-size: $size-hero-title;
+    font-size: $size-hero-title !important;
   }
 
   .logo-is-bordered-desktop {
